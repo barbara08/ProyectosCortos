@@ -1,0 +1,39 @@
+
+
+.body{
+    background-color: black;
+    display: grid;
+}
+#miNombre{
+    color: brown;
+}
+
+
+@media (max-width: 798px){
+    .body{
+        background-color: aquamarine;
+    }
+    .div-menu{
+        display: grid;
+        grid-template-area: "sobremi1 experiencias2 datosacademicos3 contacto4";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-flow: column;
+        column-gap: 2rem;
+    }
+    /** Asignamos la posición con su nombre **/ 
+    .sobreMi{
+        /** En el navegador podemos pulsar donde pone grid (en pequeño y gris) saldrá la cuadrícula
+        así podemos ver la posición **/
+        grid-area: sobremi1;
+    }
+    .experiencias{
+        grid-area: experiencias2;
+    }
+    .datosAcademicos{
+        grid-area: datosacademicos3;
+    }
+    .contacto{
+        grid-area: contacto4;
+
+    }
+}
