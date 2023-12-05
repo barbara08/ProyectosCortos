@@ -1,0 +1,77 @@
+
+.botonGenerador{
+    /*Layout*/
+width: 1400px;
+height: 200px;
+flex-shrink: 0;
+    /*style*/
+border-radius: 20px;
+border: none;
+background: linear-gradient(0deg, #1EECF9 0%, #1EECF9 100%), #1EECF9;
+    /*tipography*/
+color: #0A1CC1;
+text-align: center;
+font-family: Inknut Antiqua;
+font-size: 70px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+
+.resultadoGenerador{
+    /*Layout*/
+width: 1400px;
+height: 200px;
+flex-shrink: 0;
+    /*style*/
+border-radius: 20px;
+border: none;
+background: #111D8C;
+    /*tipography*/
+color: #3FF5F5;
+text-align: center;
+font-family: Inknut Antiqua;
+font-size: 70px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+
+
+
+
+/*
+.botonGenerador{
+color: #111D8C;
+text-align: center;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: Inknut Antiqua;
+font-size: 70px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+background: #3FF5F5;
+width: 1300px;
+height: 200px;
+flex-shrink: 0;
+}
+
+.resultadoGenerador{
+    color: #3FF5F5;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Inknut Antiqua;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    
+    background: #111D8C;
+    width: 1300px;
+    height: 200px;
+    flex-shrink: 0;
+    }
+*/
