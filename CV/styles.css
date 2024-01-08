@@ -2,13 +2,13 @@
 .body{
     background-color: black;
 }
-.miNombre{
-    color: brown;
+h1, h3 {
+    color: blueviolet;
     text-align: center;
 }
 @media (min-width: 768px){
     .body{
-        background-color: aquamarine;
+        background-color: rgb(210, 173, 245);
     }
     a{
         text-decoration: none;
@@ -17,6 +17,7 @@
 
         color: blue;
     }
+   
     .div-menu{
         display: grid;
         grid-template-area: "sobremi1  datosacademicos2 experiencias3  contacto4";
@@ -25,20 +26,122 @@
         justify-items: center;
         column-gap: 2rem;
     }
-    /** En el navegador podemos pulsar donde pone grid (en pequeño y gris) saldrá la cuadrícula
-        así podemos ver la posición **/
-    /** Asignamos la posición con su nombre **/ 
-    .a sobreMi{ /** etiqueta y nombre de la clase**/ 
-        grid-area: sobremi1; //** el nombre que hemos asignado de la posición **/
+    .btn{
+        background-color: blueviolet;
+        border-radius: 5rem;
+        padding: 15px 32px;
+        text-align: center;
+        color: antiquewhite;
+        font-size: 40px;
+        margin: 4px 2px;
+        cursor: pointer;
+
     }
-    .a datosAcademicos{
-        grid-area: datosacademicos2;
+    .btn:hover{
+        background-color: rgb(56, 4, 109);
+        color: antiquewhite;
     }
-    .a experiencias{
-        grid-area: experiencias3;
+
+    /* Fondo modal: negro con opacidad al 50% */
+    .modal {
+        display: none; /* Por defecto, estará oculto */
+        position: fixed; /* Posición fija */
+        z-index: 1; /* Se situará por encima de otros elementos de la página*/
+        padding-top: 200px; /* El contenido estará situado a 200px de la parte superior */
+        left: 0;
+        top: 0;
+        width: 100%; /* Ancho completo */
+        height: 100%; /* Algura completa */
+        overflow: auto; /* Se activará el scroll si es necesario */
+        background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */
+      }
+     /* Ventana o caja modal */
+ .contenido-modal {
+    
+    position: relative; /* Relativo con respecto al contenedor -modal- */
+  background-color: white;
+  margin: auto; /* Centrada */
+  padding: 50px;
+  width: 50%;
+  text-align: justify;
+ /* width: 60%;*/
+  -webkit-animation-name: animarsuperior;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animarsuperior;
+  animation-duration: 0.5s
+}
+
+/* Animación */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animarsuperior {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+ 
+
+     
+
+
+        /* Botón cerrar */
+    .cerrar {
+        color: black;
+        float: right;
+        font-size: 30px;
+        font-weight: bold;
     }
     
-    .a contacto{
-        grid-area: contacto4;
+    .cerrar:hover,
+    .cerrar:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
     }
+
 }
+
+
+
+
+
+
+
+/** NO HACE FALTA HACER NADA DEL SIGUIENTE CÓDIGO
+        En el navegador podemos pulsar donde pone grid (en pequeño y gris) saldrá la cuadrícula
+        así podemos ver la posición 
+        Asignamos la posición con su nombre
+
+etiqueta y nombre de la clase
+.a sobreMi{ 
+    el nombre que hemos asignado de la posición
+    grid-area: sobremi1; 
+}
+.a datosAcademicos{
+    grid-area: datosacademicos2;
+}
+.a experiencias{
+    grid-area: experiencias3;
+}
+
+.a contacto{
+    grid-area: contacto4;
+}
+
+.button sobreMi{ 
+    grid-area: sobremi1; 
+}
+.button datosAcademicos{
+    grid-area: datosacademicos2;
+}
+.button experiencias{
+    grid-area: experiencias3;
+}
+
+.button contacto{
+    grid-area: contacto4;
+}
+
+**/

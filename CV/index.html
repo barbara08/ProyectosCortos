@@ -12,48 +12,49 @@
 </head>
 <body class="body" >
     <h1 class="miNombre">BÁRBARA MARTÍN BROWN</h1>
+    <h3 class="miDescripcion" >Full Stack Development - Técnico administración</h3>
     <i class="fa-solid fa-bars"></i>
 
     <div class="div-menu">
-      <a class="sobreMi"  href="#">Sobre mí</a>
+      <a id="sobreMii" class="sobreMi"  href="#">Sobre mí</a>
       <a class="datosAcademicos"  href="#">Datos Académicos</a>
       <a class="experiencias"  href="#">Experiencias</a>
       <a class="contacto"  href="#">Cotacto</a>
     </div>
+
     
+    <div class="div-menu">
+      <button id="sobreMi" type="button" class="btn" >Sobre mí</button>
+      <button id="datosAcademicos" type="button" class="btn" >Datos Académicos</button>
+      <button id="experiencias" type="button" class="btn">Experiencias</button>
+      <button id="contacto" type="button" class="btn">Contacto</button>
+      <div id="contenidoContacto" hidden >
+        Barbara martin Brown
+        605398805
+      </div>
+    </div>
 
-<!-- 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sobre mí</a>
-              </li>
+<!--
+      <button id="sobreMi" type="button" class="btn btn-light" class="sobreMi">Sobre mí</button>
+      <button id="datosAcademicos" type="button" class="btn btn-light" class="datosAcademicos">Datos Académicos</button>
+      <button id="experiencias" type="button" class="btn btn-light" class="experiencias">Experiencias</button>
+      <button id="contacto" type="button" class="btn btn-light" class="contacto">Contacto</button> 
+-->
+    
+    <!--INCIO VENTANA MODAL-->
+    <div id="ventanaModal" class="modal">
 
-              <li class="nav-item">
-                <a class="nav-link" href="#">Experiencias</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">Datos Académicos</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#"> Contacto</a>
-              </li>
-
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            
-          </div>
+        <!--CONTENIDO DE LA VENTANA MODAL DE CADA BOTON-->
+        <div id="contenido-modal" class="contenido-modal">
+          <span class="cerrar">&times;</span>
         </div>
-      </nav> -->
-    
+    </div> 
+    <!--FIN VENTANA MODAL-->
+
+
+   <script type="text/javascript" src="cv.js"></script>
+  <!-- <script type="text/javascript" src="menu.js"></script> -->
 
 </body>
 </html>
