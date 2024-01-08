@@ -10,44 +10,41 @@
     <form action="" method="get">
         <div>
             <label>Productos</label>
-            <input></input>
+            <input id="product_value" required ></input>
         </div>
+
         <div>
             <label>Cantidad</label>
-            <input></input>
+            <input id="amount_value" required ></input>
         </div>
         <div>
-            <button type="button">Añadir</button>
+            <!--<button type="button" onclick="add_button()">Añadir</button> -->
+            <button type="button" onclick="add()">Añadir</button>
+
         </div>
         <div>
-        <input type="button" value="Genera una tabla" onclick="default_products_to_buy()" />
-
-
+            <input type="button" value="Genera una tabla" onclick="default_products_to_buy()" />
         </div>
-
-
 
         <h3>Productos por comprar</h3>
-
         <table id="table_products_to_buy" border="1" >
             <tr>
-                <th>table_products_to_buy - Cantidad </th>
+                <th>Cantidad </th>
                 <th>Producto </th>
             </tr>
-           
         </table>
         
-        
         <h3>Productos comprado</h3>
-
         <table id="table_products_purchased" border="1">
             <tr> 
-            <th>table_products_purchased Cantidad </th>
+            <th>Cantidad </th>
             <th>Producto </th>
             </tr>
         </table>
     
     </form>
-    <script type="text/javascript" src="listacompra.js"></script>
+    <!--<script type="text/javascript" src="listacompra.js"></script> -->
+    <script type="text/javascript" src="listacompra_c.js"></script>
+
 </body>
 </html>
