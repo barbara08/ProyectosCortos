@@ -33,7 +33,7 @@ const products_purchased = [
     }   
 ];
 
-// 5 Genero tabla dinámica con los valores por defecto de products_to_buy
+// 5 y 7 Genero tabla dinámica con los valores por defecto de products_to_buy y de products_purchased
 function default_products_to_buy(){
     
     //Seleccionamos el id de las tablas ya creadas table (estos son fijos)
@@ -51,10 +51,6 @@ function default_products_to_buy(){
         let textCell_amount = document.createTextNode( product.cantidad.toString() );
         let textCell_product = document.createTextNode( product.producto.toString() );
         //Añadir texto a la celda
-        cell_amount.appendChild(textCell_amount); 
-        cell_product.appendChild(textCell_product); 
-        //Creo de nuevo el siguiente texto (node)
-        //Y lo vuelvo a añadir el texto a la celda
         cell_amount.appendChild(textCell_amount); 
         cell_product.appendChild(textCell_product); 
         //Añadir celda a la fila
@@ -91,6 +87,43 @@ function default_products_purchased(){
 }
 default_products_purchased();
 
+// 8 Añadir desde el formulario productos a la tabla Productos por comprar
+
+function button_add(){
+    let form_product = document.getElementById("add_product").value;
+    let form_amount = document.getElementById("add_amount").value;
+    //document.getElementById("resultado").innerHTML = form_product;
+    //document.getElementById("resultado").innerHTML = form_amount;
+    let data = {
+        'id': 100,
+        'cantidad': form_amount,
+        'producto': form_product 
+    };
+   // products_to_buy.push(data);
+    products_to_buy.push({
+        "id": 100, 
+        'cantidad': form_amount,
+        'producto' :form_product
+    });
+    console.log(products_to_buy);
+
+    add_row("table_products_to_buy", data);
+
+    function add_row(table_id, data){
+        let table = document.getElementById(table_id); 
+        let tr = document.createElement("tr");
+        table.appendChild(tr);
+        let td_amount = document.createElement("td");
+        let td_product = document.createElement("td");
+        tr.appendChild(td_amount);
+        tr.appendChild(td_product);
+        let data_amount = document.createTextNode(data['cantidad']);
+        let data_product = document.createTextNode(data["producto"]);
+        td_amount.appendChild(data_amount);
+        td_product.appendChild(data_product);
+    } 
+}
+
 
 
 
@@ -101,7 +134,7 @@ x3 Tabla de productos ya compradas
 x4 Datos por defecto para cosas por comprar
 x5 Mostrar los datos por defecto en su tabla (por comprar)
 x6 Datos por defecto para cosas ya compradas
-7 Mostrar los datos por defecto en su tabla (ya compradas)
+x7 Mostrar los datos por defecto en su tabla (ya compradas)
 8 añadir desde el formulario datos a la tabla por comprar
 9 hacer validación de los datos del formulario
 10 mover 1 dato desde "a comprar" hacia "ya compradas"
@@ -117,6 +150,14 @@ x6 Datos por defecto para cosas ya compradas
 
 
 
+
+/*
+const button = document.getElementById("add");
+//const button = document.querySelector("button");
+button.addEventListener("click", function() {
+    document.getElementById("resultado").innerHTML = form_product;
+    });
+*/
 
 /* COMPROBACION DE DATOS
  for(let i=0; i<products_to_buy.length; i++){
